@@ -1,0 +1,23 @@
+{
+  "name": "lascon-atx-2019-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mdx-deck deck.mdx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meddlin/lascon-atx-2019-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meddlin/lascon-atx-2019-notes/issues"
+  },
+  "homepage": "https://github.com/meddlin/lascon-atx-2019-notes#readme",
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  }
+}
