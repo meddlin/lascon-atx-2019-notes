@@ -1,3 +1,5 @@
+## OWASP Top 10: Injection
+
 Side note: The OWASP top 10 has changed over time, but the core pieces of it have stayed the same because statistics and tests across newer software still shows some of the same vulns are still there.
 
 There has been a decrease in the number of buffer overflows, though. It doesn't mean this classification has been "fixed", but it's just not as prevalent in web apps as other errors/vulns: injection, XSS, etc.
@@ -6,6 +8,7 @@ Side note: Speed of developers coming into industry. It's alarming to see develo
 
 Also, a lot of job openings are looking for "unicorn candidates" which is in direct opposition to how fast and how available this information/training/experience typically comes to people in the industry.
 
+<hr />
 
 Injection: turning "data to be stored" into "code to be processed"
 
