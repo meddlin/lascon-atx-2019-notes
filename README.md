@@ -46,8 +46,6 @@ a developer's perspective. *We only have an hour
   - OS cmd injection
   - LDAP injection
 
-What's it look like?
-
 *Code Vulnerability*
 
 ```csharp
@@ -61,39 +59,88 @@ cmd.Execute();
 *Exploitation*
 
 ```
-Expected: "John Smith"
+Expected input: "John Smith"
 
-Malicious: "OR 1=1 UNION SELECT * FROM administrators;";
+Malicious input: "OR 1=1 UNION SELECT * FROM administrators;";
 ```
 
+Reference - SQL Injection: [https://portswigger.net/web-security/sql-injection](https://portswigger.net/web-security/sql-injection)
+
 ### Cross-site scripting (XSS)
+
+*"If an attacker controls your browser--it is no longer your browser."*
 
 Not a direct attack.
 
 There are a couple different types:
 
+- Stored
+- Reflected
+- DOM based
+
 What's it look like?
+
+*When this is type of input is accepted from the user*
+
+```html
+<script>alert(document.cookie)</script>
+```
 
 ### Misconfiguration
 
 - Has anything been misconfigured as this went through the DevOps pipelines?
 - Is anything out of date in your DevOps pipeline?
 
-### 
+Things to check:
+
+- out of date software
+- default accounts and/or passwords still enabled or unchanged?
+- Error handling reveals stack traces (*too much info*)
+
+### Sensitive Data Exposure
+
+
 
 ### Vulnerable components
 
-What is AppSec?
+**Bit-coin mining package**
 
-"Shift-left" movement
+> A package, `event-stream`, was handed to a new author who "incidentally" modified it with "Bitcoin-siphoning malware".
 
-- How does AppSec relate to this?
+What started it? 
 
+- An author wanted to give up a module.
+- Unvetted authors
+- Unvetted code
+
+TheRegister Article/Explanation: [https://www.theregister.co.uk/2018/11/26/npm_repo_bitcoin_stealer/](https://www.theregister.co.uk/2018/11/26/npm_repo_bitcoin_stealer/)
+
+**`left-pad` debacle**
+
+> 17 lines of JS used for left-justifying text.
+
+An ugly dispute led to a single open-source author deleting his modules--*one of them being* `left-pad`--that was buried in
+the dependency chain of thousands of other projects. This led to massive failures across the internet.
+
+ArsTechnica Article/Explaination: [https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/](https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/)
+
+left-pad on npm: [https://www.npmjs.com/package/left-pad](https://www.npmjs.com/package/left-pad) *It's been deprecated, but is still listed at 4.2M weekly downloads.*
 
 <hr />
 
-Application Security
+## What is AppSec?
+
+### Application Security
 
 "Ensuring that custom application code performs as expected under the entire range of possible inputs."
 
 - *If QA verifies software does what it's supposed to do, then AppSec is concerned that software doesn't do what it shouldn't do.* 
+
+
+Static vs. Dynamic Code Analysis
+
+### "Shift-left" movement
+
+- How does AppSec relate to this?
+
+
