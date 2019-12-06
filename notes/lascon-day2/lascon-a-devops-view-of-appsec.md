@@ -2,7 +2,7 @@
 
 Boyd E. Hmphill, Director of Cloud Engineering, Contrast Security
 
-A DevOp is *not* AppSec!
+A DevOps is *not* AppSec!
 
 Learn from others mistakes; be *wise* not *smart*
 
