@@ -1,5 +1,9 @@
 ## Cloud Security at Scale: Managing the Chaos
 
+> See the talk from LASCON!
+> 
+> [https://www.youtube.com/watch?v=tc9DINU3bS8&list=PLLWzQe8KOh5l4JeHrl-a1A7AcNYazBTCC&index=23](https://www.youtube.com/watch?v=tc9DINU3bS8&list=PLLWzQe8KOh5l4JeHrl-a1A7AcNYazBTCC&index=23)
+
 
 Ken Toler, @relotnek
 Mike McCabe, @mccabe615
